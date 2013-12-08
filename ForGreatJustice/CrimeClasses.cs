@@ -10,6 +10,7 @@ namespace ForGreatJustice
         public string category { get; set; }
         public Location location { get; set; }
         public DateTime month { get; set; }
+        public OutcomeStatus outcome_status { get; set; }
         public string persistent_id { get; set; }
     }
 
