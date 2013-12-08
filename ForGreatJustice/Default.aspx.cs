@@ -21,7 +21,7 @@ namespace ForGreatJustice
             {
                 Crime c = crimeList.crimes[rnd.Next(crimeList.crimes.Count)];
 
-                if (c.persistent_id != "")
+                if (c.persistent_id != null && c.outcome_status != null)
                 {
                     mainContent.Text +=
                     @"<div class='crime clearfix'>" +

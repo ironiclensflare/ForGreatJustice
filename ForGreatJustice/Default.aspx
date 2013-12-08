@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="container" class="clearfix">
-        <h1>Crimes that have happened in Nottingham</h1>
+        <h1>Crimes that have happened</h1>
         <asp:Literal ID="mainContent" runat="server"></asp:Literal>
     </div>
     <p class="copyright">Crime data provided by <a href="http://data.police.uk" title="">data.police.uk</a>. Images by <a href="https://developers.google.com/maps/" title="Google Street View">Google Street View</a>.</p>
