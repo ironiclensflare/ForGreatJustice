@@ -12,35 +12,17 @@ namespace ForGreatJustice
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CrimeInfo crimeList = new CrimeInfo();
-            mainContent.Text = "";
-            Random rnd = new Random();
-            int n = 0;
-
-            while (n < 10)
+            if (Request.QueryString["lat"] != null && Request.QueryString["lng"] != null)
             {
-                Crime c = crimeList.crimes[rnd.Next(crimeList.crimes.Count)];
-
-                if (c.persistent_id != null && c.outcome_status != null)
-                {
-                    mainContent.Text +=
-                    @"<div class='crime clearfix'>" +
-
-                        @"<div class='streetView'>" +
-                            @"<img src='http://maps.googleapis.com/maps/api/streetview?size=640x480&location=" + c.location.latitude + "," + c.location.longitude + @"&heading=0&sensor=false' alt='Image' />" +
-                        @"</div>" +
-
-                        @"<div class='crimeInfo'>" +
-                            @"<p><strong>Date:</strong> " + c.month.Month.ToString() + "/" + c.month.Year.ToString() + @"</p>" +
-                            @"<p><strong>Crime type:</strong> " + c.category.ToString() + @"</p>" +
-                            @"<p><strong>Location:</strong> " + c.location.street.name.ToString() + @"</p>" +
-                            @"<p><strong>Outcome:</strong> " + c.outcome_status.category.ToString() + @"</p>" +
-                        @"</div>" +
-
-                    @"</div>";
-
-                    n++;
-                }
+                CrimeInfo crimeList = new CrimeInfo(Request.QueryString["lat"].ToString(), Request.QueryString["lng"].ToString());
+                mainContent.Text = crimeList.html;
+                place.Text = "your location";
+            }
+            else
+            {
+                CrimeInfo crimeList = new CrimeInfo();
+                mainContent.Text = crimeList.html;
+                place.Text = "Liverpool";
             }
         }
     }
