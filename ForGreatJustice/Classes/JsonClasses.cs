@@ -45,9 +45,9 @@ namespace ForGreatJustice
 
                         @"<div class='streetView'>" +
                             //Placeholder image to stop hammering the Street View API
-                            @"<img src='/placeholder.png' alt='Image' />" +
+                            //@"<img src='/placeholder.png' alt='Image' />" +
 
-                            //@"<img src='http://maps.googleapis.com/maps/api/streetview?size=640x480&location=" + c.location.latitude + "," + c.location.longitude + @"&heading=0&sensor=false&key=AIzaSyBPAf4SSt1ndJ7qYLo9CJ3s48NRUbF4sKQ' alt='Image' />" +
+                            @"<img src='http://maps.googleapis.com/maps/api/streetview?size=640x480&location=" + c.location.latitude + "," + c.location.longitude + @"&heading=0&sensor=false&key=AIzaSyBPAf4SSt1ndJ7qYLo9CJ3s48NRUbF4sKQ' alt='Image' />" +
                         @"</div>" +
 
                         @"<div class='crimeInfo'>" +

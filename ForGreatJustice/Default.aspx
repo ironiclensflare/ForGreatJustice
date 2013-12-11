@@ -6,8 +6,8 @@
 <head runat="server">
     <title>Crime!</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/search.js"></script>
 </head>
 <body>
     <div id="container" class="clearfix">
